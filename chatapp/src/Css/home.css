@@ -1,0 +1,75 @@
+.home_user_list_container
+{
+    padding: 0px 0px;
+    max-height: 95vh;
+    overflow-y: scroll;
+}
+.home_user_list_header
+{
+    display: flex;
+    align-items: cener;
+}
+.home_user_list_heading
+{
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: rgb(49, 49, 49);
+}
+.home_user_bg
+{
+    background-color: rgb(13, 7, 99);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+    margin-left: auto;
+}
+.home_user_add_person_icon
+{
+    margin : 8px 9px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 18px;
+    height: 18px;
+}
+.home_user_add_person_icon:hover
+{
+    cursor: pointer;
+}
+
+.home_user_list_info
+{
+    margin: 10px 0px 10px 0px;
+}
+.home_user_item
+{
+    padding: 10px 4px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: 0.4s all ease-in-out;
+}
+.home_user_item:hover
+{
+    cursor: pointer;
+    background-color: rgb(230, 227, 227);
+}
+.home_user_name
+{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.005rem;
+    color: rgb(32, 32, 32);
+}
+.home_user_message_length
+{
+    margin-left: auto;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 5px 8px;
+    color: whitesmoke;
+    font-size: .700rem;
+    background-color: rgb(3, 3, 100);
+}

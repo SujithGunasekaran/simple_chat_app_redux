@@ -1,0 +1,100 @@
+.chat_container
+{
+    padding: 10px 10px;
+}
+.chat_empty_message
+{
+    font-size: 1rem;
+    color: rgb(172, 171, 171);
+    font-weight: 500;
+    text-align: center;
+}
+.chat_user_container
+{
+    padding: 0px 0px;
+}
+.chat_user_name
+{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: rgb(46, 46, 46);
+}
+.chat_user_message_box
+{
+    position: relative;
+    margin-top: 15px;
+    height: 90vh;
+    width: 100%;
+    padding: 10px 0px;
+    overflow-y: scroll;
+    background-color: rgb(216, 215, 215);
+    border-radius: 6px;
+}
+.chat_user_message_input_container
+{
+    margin-top: auto;
+    position: fixed;
+    padding: 10px 10px;
+    bottom: 0;
+    width: 100%;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(209, 207, 207);
+}
+.chat_user_message_input
+{
+    padding: 8px 8px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(194, 193, 193);
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+}
+.chat_user_message_input::placeholder
+{
+    font-size: .850rem;
+    font-weight: 400;
+    color: rgb(110, 110, 110);
+}
+.chat_user_message_input:focus
+{
+    outline: none;
+}
+.chat_user_message_btn
+{
+    width: 100%;
+    padding: 8px 0px;
+    background-color: rgb(6, 6, 112);
+    border-radius: 6px;
+    border: none;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: .930rem;
+}
+.chat_user_message_card
+{
+    margin: 15px 6px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.chat_user_message_text
+{
+    padding: 9px;
+    margin-left: auto;
+    border-radius: 20px;
+    background-color: rgb(205, 192, 252);
+    max-width: 350px;
+}
+.chat_user_message_time
+{
+    margin-left: auto;
+    font-size: .700rem;
+    font-weight: 500;
+    color: black;
+}
+
