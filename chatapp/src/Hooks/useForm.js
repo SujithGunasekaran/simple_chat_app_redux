@@ -28,7 +28,12 @@ const useForm = () => {
     }
 
 
-    return { formValues, formError, handleInputField, setFormError }
+    const resetInputField = () => {
+        setFormValues({});
+    }
+
+
+    return { formValues, formError, handleInputField, setFormError, resetInputField }
 
 }
 

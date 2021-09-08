@@ -6,6 +6,13 @@
     background-color: rgb(192, 189, 189);
     border-radius: 6px;
 }
+.login_heading
+{
+    padding: 10px 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(49, 49, 49);
+}
 .login_input
 {
     margin: 10px 0px;

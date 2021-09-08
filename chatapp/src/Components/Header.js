@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 const Header = (props) => {
 
     // dispatch
     const dispatch = useDispatch();
+
+    // redux-state
+    const { loggedUserInfo } = useSelector(state => state.userReducer);
 
     const handleLogout = () => {
         dispatch({
@@ -19,7 +22,10 @@ const Header = (props) => {
         <Fragment>
             <div className="header_container">
                 <div className="header_logo">ChatApp</div>
-                <button className="header_logout_btn" onClick={() => handleLogout()}>Logout</button>
+                {
+                    Object.keys(loggedUserInfo).length > 0 &&
+                    <button className="header_logout_btn" onClick={() => handleLogout()}>Logout</button>
+                }
             </div>
         </Fragment>
     )

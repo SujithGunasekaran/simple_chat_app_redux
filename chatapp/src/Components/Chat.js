@@ -3,18 +3,19 @@ import { useSelector, useDispatch } from 'react-redux';
 import useForm from '../Hooks/useForm';
 import { fromNow } from '../Util';
 
-const Chat = (props) => {
+const Chat = () => {
 
     // redux-state
     const { currentViewUserInfo } = useSelector(state => state.userReducer);
 
     // hooks
-    const { formValues, formError, handleInputField, setFormError } = useForm();
+    const { formValues, formError, handleInputField, setFormError, resetInputField } = useForm();
 
     // dispatch
     const dispatch = useDispatch();
 
-    const sendMessage = () => {
+    const sendMessage = (e) => {
+        e.preventDefault();
         if (formValues.message) {
             dispatch({
                 type: 'SET_USER_MESSAGE',
@@ -25,14 +26,13 @@ const Chat = (props) => {
                         time: Date.now()
                     }
                 }
-            })
+            });
+            resetInputField();
         }
         else {
             setFormError({ 'message_Error': 'Please enter something' });
         }
     }
-
-    console.log(currentViewUserInfo)
 
     return (
         <Fragment>
@@ -54,24 +54,26 @@ const Chat = (props) => {
                                 }
                             </div>
                             <div className="chat_user_message_input_container">
-                                <div className="row" style={{ width: '100%' }} >
-                                    <div className="col-md-11">
-                                        <input
-                                            className="chat_user_message_input"
-                                            placeholder="Type Something..."
-                                            name="message"
-                                            value={formValues?.message ?? ''}
-                                            onChange={handleInputField}
-                                        />
-                                        {
-                                            formError.message_Error &&
-                                            <div className="form_error">{formError['message_Error']}</div>
-                                        }
+                                <form onSubmit={sendMessage} style={{ width: '100%' }}>
+                                    <div className="row" >
+                                        <div className="col-md-11">
+                                            <input
+                                                className="chat_user_message_input"
+                                                placeholder="Type Something..."
+                                                name="message"
+                                                value={formValues?.message ?? ''}
+                                                onChange={handleInputField}
+                                            />
+                                            {
+                                                formError.message_Error &&
+                                                <div className="form_error">{formError['message_Error']}</div>
+                                            }
+                                        </div>
+                                        <div className="col-md-1">
+                                            <button type="submit" className="chat_user_message_btn">Send</button>
+                                        </div>
                                     </div>
-                                    <div className="col-md-1">
-                                        <button className="chat_user_message_btn" onClick={() => sendMessage()}>Send</button>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>

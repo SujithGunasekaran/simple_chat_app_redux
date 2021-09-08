@@ -59,7 +59,7 @@ const ModelForm = (props) => {
                         <div className="model_form_error">{formError['email_Error']}</div> : null
                 }
                 <input
-                    type="tel"
+                    type="number"
                     className="model_input"
                     name="phoneNumber"
                     maxLength={10}

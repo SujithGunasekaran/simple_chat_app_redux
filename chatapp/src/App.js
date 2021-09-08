@@ -6,8 +6,9 @@ import './Css/root.css';
 import './Css/home.css';
 import './Css/model.css';
 import './Css/chat.css';
+import './Css/footer.css';
 
-const App = (props) => {
+const App = () => {
 
   return (
     <Fragment>

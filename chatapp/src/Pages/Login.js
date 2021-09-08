@@ -53,6 +53,7 @@ const Login = (props) => {
                 <div className="row">
                     <div className="col-md-4 mx-auto">
                         <div className="login_main">
+                            <div className="login_heading">Login</div>
                             <form onSubmit={handleLoginFormSubmit}>
                                 <input
                                     type="text"
